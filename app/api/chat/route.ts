@@ -1,6 +1,6 @@
 // app/api/chat/route.ts
 import { NextResponse } from 'next/server';
-export const maxDuration = 300;
+export const maxDuration = 60;
 
 interface Message {
   role: 'user' | 'assistant';
@@ -24,7 +24,7 @@ export async function POST(request: Request) {
 
     console.log('Sending request to LLM API:', { message });
     
-    const timeoutId = setTimeout(() => controller.abort(), 290000);
+    const timeoutId = setTimeout(() => controller.abort(), 58000);
 
     try {
       const response = await fetch('http://localhost:5000/chat', {
