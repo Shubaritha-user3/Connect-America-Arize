@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     const timeoutId = setTimeout(() => controller.abort(), 58000);
 
     try {
-      const response = await fetch('http://localhost:5000/chat', {
+      const response = await fetch('https://connect-america-arize-3ouy.vercel.app/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
